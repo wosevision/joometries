@@ -1,3 +1,4 @@
 import { Point } from './Point';
+import { MultiPoint } from './MultiPoint';
 
-export { Point };
+export { Point, MultiPoint };
