@@ -15,8 +15,8 @@ module.exports = function(root) {
   });
 
   afterEach(() => {
-    delete root.stub;
-    delete root.spy;
+    Reflect.deleteProperty(root, 'stub');
+    Reflect.deleteProperty(root, 'spy');
     root.sandbox.restore();
   });
 };
