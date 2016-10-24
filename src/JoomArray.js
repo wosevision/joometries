@@ -8,7 +8,7 @@ class JoomArray extends Array {
 		makeError.if(args.length === 0, ERRORS.VALUE_MISSING);
 		
 		// const vals = Array.prototype.concat.apply([], args.map(fn));
-		const vals = Reflect.apply(Array.concat, null, args.map(flatmapFn));
+		const vals = Reflect.apply(Array.concat, [], args.map(flatmapFn));
 		super(...vals);
 	}
 }
