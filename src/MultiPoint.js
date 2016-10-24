@@ -23,6 +23,7 @@ class MultiPoint extends JoomArray {
 		);
 		// error if no matches
 		makeError.if( (!this || !this.length), ERRORS.NO_MATCHES);
+		// makeError.if( (this.length === 1), ERRORS.NOT_ENOUGH_VAL);
 	}
 }
 
