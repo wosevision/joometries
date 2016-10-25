@@ -124,7 +124,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				// if not, convert it to a string...
 				.toString()
 				// ...scour it for any semblance of a signed decimal...
-				.match(/(\-?\d+(\.\d+)?)/g)
+				.match(/(\-?[\d]+(\.?\d+)?)/g)
 				// ...and force all matches to number or zero
 				.map(function (item) {
 					return Number(item) || 0;
@@ -371,7 +371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				// if not, convert it to a string...
 				.toString()
 				// ...scour it for any semblance of a signed decimal...
-				.match(/(\ *([\-?\d]+[\.\d]?)\w+\ *[\,]?){3}/g)
+				.match(/(\ *(\-?[\d]+(\.?\d+)?)+\ *[\,]?){3}/g)
 				// ...and force all matches to number or zero
 				.map(function (item) {
 					return new _Point.Point(item) || 0;
@@ -436,7 +436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				// if not, convert it to a string...
 				.toString()
 				// ...scour it for any semblance of a signed decimal...
-				.match(/((\ *([\-?\d]+[\.\d]?)\w+\ *[\,]?){3})+/g)
+				.match(/((\ *(\-?[\d]+(\.?\d+)?)+\ *[\,]?){3})+/g)
 				// ...and force all matches to number or zero
 				.map(function (item) {
 					return new _MultiPoint.MultiPoint(item) || 0;
