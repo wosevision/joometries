@@ -15,48 +15,46 @@
 GeoJSON made parsing geometry a breeze for map software – but what about the humans that need to design input controls and content management systems *for* that geometry? It would be just lovely if any given user-generated value came in the form of (and could be stored in a database as):
 
 ```JavaScript
-const pristineFormatting =
+const inYourDreams = [
 	[
-		[
-			[ 11, 22, 33 ],
-			[ 11, 22, 33 ]
-		]
+		[ 11, 22, 33 ],
+		[ 11, 22, 33 ]
 	]
+];
 ```
 
 ...but more often than not, they'll be coming in like this:
 
 ```JavaScript
-let stringRiddledAndFlat =
-	[
-		[ "11", "22", "33" ],
-		[ "11", "22", "33" ]
-	]
+let stringRiddledAndFlat = [	
+	[ "11", "22", "33" ],
+	[ "11", "22", "33" ]
+];
 ```
 
 ...or worse yet, this:
 
 ```JavaScript
-var creativeDevs =
-	new Object({
-		"who": [ "11 , 22,   33" ],
-		"knows": [ "11, 22,33" ],
-		"what": [ 11, 22, "33" ]
-	})
+var creativeDevs = new Object({
+	"who": [ "11 , 22,   33" ],
+	"knows": [ "11, 22,33" ],
+	"what": [ 11, 22, "33" ]
+});
 ```
 
 ...or heaven forbid, these shenanigans:
 
 ```JavaScript
-const whatMostDBsLookLike = 
-[{
+const whatMostDBsLookLike = [{
 	lat: 11, lng: 22, dep: 33
 },{
 	lat: 11, lng: 22, dep: 33
-}]
+}];
 ```
 
-**Joometries** are wee little classes to transmogrify a vivid range of number/string/array/mixup combos into valid geoJSON geometries. If there's one thing the average CMS excels at, it's manipulating and storing text-as-strings-as-text, so why work against the grain when you can do this...
+**Joometries** are wee little classes to transmogrify a vivid range of number/string/array/mixup combos into valid geoJSON geometries. If there's one thing the average CMS excels at, it's manipulating and storing text-as-strings-as-text, so why work against the grain?
+
+### Make it more Joometrical:
 
 ```
 const polygon = new Polygon([ 
