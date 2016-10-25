@@ -1,6 +1,6 @@
 {
   "name": "joometries",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bulletproof classes for generating and manipulating geoJSON more radically",
   "main": "dist/joometries.js",
   "scripts": {
