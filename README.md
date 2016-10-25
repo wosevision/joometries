@@ -58,12 +58,12 @@ const whatMostDBsLookLike = [{
 
 ```JavaScript
 const polygon = new Polygon([ 
-	"2.812500,66.861082,0.0 
+	`2.812500,66.861082,0.0 
 	2.636719,62.593341,0.0 
-	16.523438,62.754726,0.0",
-	"-23.906250,54.572062,0.0 
+	16.523438,62.754726,0.0`,
+	`-23.906250,54.572062,0.0 
 	-22.851563,52.802761,0.0 
-	-17.929688,53.852527,0.0"
+	-17.929688,53.852527,0.0`
 ]);
 ```
 
@@ -71,11 +71,28 @@ const polygon = new Polygon([
 ```JavaScript
 [
 	[
-		[2.812500,66.861082,0.0],
-		[2.636719,62.593341,0.0],
-		[16.523438,62.754726,0.0]
+		[ 2.812500, 66.861082, 0.0 ],
+		[ 2.636719, 62.593341, 0.0 ],
+		[ 16.523438, 62.754726, 0.0 ]
 	], [
 		...allThatJazz
 	]
 ]
 ```
+
+## Beam me up
+
+You know the drill. 
+
+#### Get it
+
+`npm install joometries`
+
+#### Use it
+
+Node: `var Polygon = require('joometries').Polygon`
+ES6 (Babel/Browserify): `import { Polygon } from 'joometries'`
+
+#### Abuse it
+
+`var polygon = new Polygon(new MultiPoint([11,22,33],'11,22,33'), [new Point('11,22,33'), '11,22,33'])`
