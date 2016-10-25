@@ -17,7 +17,7 @@ class Point extends JoomArray {
 				// if not, convert it to a string...
 				.toString()
 				// ...scour it for any semblance of a signed decimal...
-				.match(/(\-?\d+(\.\d+)?)/g)
+				.match(/(\-?[\d]+(\.?\d+)?)/g)
 				// ...and force all matches to number or zero
 				.map(item => ( Number(item) || 0 ) ),
 			...args

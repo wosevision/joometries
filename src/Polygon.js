@@ -17,7 +17,7 @@ class Polygon extends JoomArray  {
 				// if not, convert it to a string...
 				.toString()
 				// ...scour it for any semblance of a signed decimal...
-				.match(/((\ *([\-?\d]+[\.\d]?)\w+\ *[\,]?){3})+/g)
+				.match(/((\ *(\-?[\d]+(\.?\d+)?)+\ *[\,]?){3})+/g)
 				// ...and force all matches to number or zero
 				.map(item => ( new MultiPoint(item) || 0 ) ),
 			...args
