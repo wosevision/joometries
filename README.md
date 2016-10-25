@@ -56,7 +56,7 @@ const whatMostDBsLookLike = [{
 
 ### Make it more Joometrical:
 
-```
+```JavaScript
 const polygon = new Polygon([ 
 	"2.812500,66.861082,0.0 
 	2.636719,62.593341,0.0 
@@ -68,7 +68,7 @@ const polygon = new Polygon([
 ```
 
 ...and get *this goodness!*
-```
+```JavaScript
 [
 	[
 		[2.812500,66.861082,0.0],
